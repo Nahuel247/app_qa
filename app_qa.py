@@ -23,7 +23,8 @@ from transformers import pipeline
 def load_pipeline():
     return pipeline(
         task="question-answering",
-        model="PlanTL-GOB-ES/roberta-base-bne-sqac",
+        model="distilbert-base-cased-distilled-squad",
+        #model="PlanTL-GOB-ES/roberta-base-bne-sqac",
         #model="google/flan-t5-large",
         #model="HuggingFaceH4/zephyr-7b-beta",
         #model="google/flan-t5-large"
@@ -74,6 +75,7 @@ if uploaded_file is not None:
         st.error("No se pudo extraer texto del PDF. Asegúrate de que el PDF contiene texto seleccionable (no solo imágenes).")
 else:
     st.info("Por favor, sube un archivo PDF para comenzar.")
+
 
 
 
